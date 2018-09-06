@@ -1,0 +1,69 @@
+/* CSS를 활용한 레이아웃 및 UI 디자인 */
+body{
+    margin: 0;
+}
+/* 리셋 css */
+h1, h2, h3, h4, h5, h6{
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+}
+/* 레이아웃 */
+.container{
+    background-color: #aaa;
+   /* 100vh 화면에 보여지는 영역에 100% */
+    height: 100vh;
+}
+.header, .visual, .main, .slogan, .footer{
+    width: 940px; 
+    margin: 0  auto;
+
+}
+/* 헤더 */
+.header{
+    background-color: yellow;
+    /* 10vh 10/1 만큼  */
+    height: 10vh;
+}
+/* 비주얼 */
+.visual{
+    background-color: orange;
+    height: 10vh;
+}
+/* 메인 */
+.main{
+    background-color: blue;
+    height: 60vh;
+    display: flex;
+    /*  flex-direction: row; X축 방향으로  */
+    flex-direction: row;
+    /* justify-content 속성 알아보기 */
+    justify-content: space-evenly;
+    padding:  30px 0;
+}
+.group1{
+    background-color: skyblue;
+    width: 250px;
+}
+.group2{
+    background-color: skyblue;
+    width: 380px;
+}
+.group3{
+    background-color: skyblue;
+    width: 190px;
+}
+/* 슬로건 */
+.slogan{
+    background-color: lime;
+    height: 10vh;
+}
+/* 푸터배경 */
+.footer-bg{
+    background-color: purple;
+}
+/* 푸터 */
+.footer{
+    background-color: pink;
+    height: 10vh;
+}
