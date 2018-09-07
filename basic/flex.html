@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>플렉스 박스</title>
+    <style>
+        .container{
+            background-color: yellow;
+            padding: 10px 0;
+            display: flex;
+            /* flex  default는 row*/
+            flex-direction: row;
+            justify-content: space-between;
+            /* align-items: center; */
+            height: 200px;
+            width: 600px;
+            /* 줄바꿈 */
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+        .container div{
+            background-color: pink;
+            display: flex;
+            /* align-items: center; */
+            width: 250px;
+        }
+        .box4{
+            /* !important 강제로 우선순위 !주의 마약 같은 존재 */
+            background-color: #fff !important;
+            order: -1;
+            flex-shrink: 3;
+        }
+        div.box1{
+            background-color: orange;
+            order: 1;
+            flex-shrink: 2;
+        }
+        div.box2{
+            background-color: skyblue;
+            align-self:baseline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">박스1</div>
+        <div class="box2">박스2</div>
+        <div class="box3">박스3</div>
+        <div class="box4">박스4</div>
+    </div>
+</body>
+
+</html>

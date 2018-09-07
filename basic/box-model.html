@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>박스모델</title>
+    <style>
+        .content-box{
+            background-color: yellow;
+            width:  500px;
+            height: 500px;
+            border: 10px solid blue;
+            padding: 20px 50px 30px;
+            margin: 50px;
+            box-sizing: content-box;
+        }
+        .border-box{
+            background-color: pink;
+            width:  500px;
+            height: 500px;
+            border: 10px solid blue;
+            padding: 20px 50px 30px;
+            margin: 50px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box">콘텐츠 박스</div>
+    <div class="border-box">보더 박스</div>
+</body>
+</html>
