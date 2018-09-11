@@ -1,12 +1,119 @@
-/* CSS를 활용한 레이아웃 및 UI 디자인 */
-body{
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR");
+/* border-box값으로 기본처리
+레이아웃  */
+*, *::after, *::after{
+    box-sizing: border-box;
+}
+/* 스타일 초기화 
+전체 선택자: *
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
     margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 1em;
+    font-size: 1em;
+    /* font를 부모에게 상속 받아라 */
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers 
+알지 못하는 태그는 inline 처리 하기 떄문에 
+*/
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main{
+    display: block;
+}
+/*  블릿을 없어주는 코드 
+    ol: 숫자 블릿 리스트  
+*/
+ul {
+	list-style: none;
+}
+table {
+    /*talbe border스타일 심플하게 */
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*  css 모듈 
+    가상요소 clearfix 제작 
+*/
+.clearfix::after{
+    /* 상자를 만들어주려면 content="" null값 필요  */
+    content: "";
+    display: block;
+    clear: both;
+}
+/* 숨김 콘텐츠 */
+.readable-hidden, .skip-nav{
+    background-color: yellow;
+    /* 콘텐츠를 아예 없음*/
+    /* display: none; */
+    /* 화면에서 감춰지지만접근 할수 없음*/
+    /* visibility: hidden; */
+    /* 숨김처리 트릭 화면에서 멀리 보내기*/
+    /* position: relative;
+    left: -9999em; */
+    /* 접근할수 있으면서 화면에서만 안보이게 하는 트릭 */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin:-1px;
+    /* 사각형 단위로 짤라내기 */
+    clip: rect(0,0,0,0);
+}
+/* 동적으로 보이도록 처리 */
+.skip-nav:focus{
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    clip: rect(auto,auto,auto,auto);
+    z-index: 100;
+}
+/* 
+    css는 마지막에 선언 한것이 적용 
+*/
+/* 본문 스타일 */
+/* 디폴트 폰트 사이즈 변경  */
+html{
+    font-size:10px;
+}
+body{
+    color: #181818;
+    background-color: #fff;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+/* 하이퍼링크 스타일 */
+a{
+    color: inherit;
+    text-decoration: none;
+    /* cursor: crosshair; */
 }
 /* 리셋 css */
 h1, h2, h3, h4, h5, h6{
-    font-size: 1em;
+    /* font-size: 1em; */
     font-weight: normal;
-    margin: 0;
+    /* margin: 0; */
 }
 /* 레이아웃 */
 .container{
@@ -17,15 +124,79 @@ h1, h2, h3, h4, h5, h6{
 .header, .visual, .main, .slogan, .footer{
     width: 940px; 
     margin: 0  auto;
-
+    /* p, m를 width 값을 포함  */
+    box-sizing: border-box;
 }
 /* 헤더 */
 .header{
-    background-color: yellow;
+    background-color: #fff;
     /* 10vh 10/1 만큼  */
     /* height: 10vh; */
     position: relative;
+    /* x축은 0, y축은 30px */
+    padding: 0 40px;
 }
+/* 멤버링크 flex 사용  */
+/* 
+.member{
+    background-color: yellow;
+    display: flex;
+    justify-content: flex-end;
+} 
+*/
+/* float 사용  */
+/* .member{
+    background-color: yellow;
+    float: right;
+    width: 100%;
+} 
+member li 
+.member li{
+    float: left;
+} 
+*/
+/* 멤버 스타일 */
+.member{
+    text-align: right;
+    font-size: 0;  
+    padding: 2px 0; 
+    /* 상대배치 */ 
+    /* position: relative;
+    right: -10px; */
+    margin-left: -10px;
+} 
+.member li, .member a{
+    /* inline은 높이 값을 가지고 있지 않지만  inline-block은 block이기 떄문에 가지고 있음  */
+    display: inline-block;
+}
+.member li {
+    font-size: 1.4rem;  
+}
+
+/* .member li::before{
+    content: ":";
+    font-size: 1.4rem;    
+} */
+
+/* .bullet::before{
+    content: ":";
+} */
+
+/*  th-child 구조 선택자 사용 (2부터)*/
+.member li:nth-child(n+2)::before{
+    content: ":";
+}
+
+.member a {
+    padding: 8px 10px;
+    /* 소문자가 들어와도 대문자로 처리 */
+    text-transform: uppercase;
+}
+
+.readable-hidden{
+    background: pink;
+}
+
 /* 로고 */
 .logo{
     position: absolute;
@@ -35,7 +206,6 @@ h1, h2, h3, h4, h5, h6{
 /* 비주얼 */
 .visual{
     background-color: orange;
-    height: 10vh;
 }
 /* 메인 */
 .main{
@@ -63,7 +233,6 @@ h1, h2, h3, h4, h5, h6{
 /* 슬로건 */
 .slogan{
     background-color: lime;
-    height: 10vh;
 }
 /* 푸터배경 */
 .footer-bg{

@@ -7,18 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> 웹카페-HTNL5,CSS3,웹접근성 </title>
-    <link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/common/webcafe.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/style-float.css"> -->
 </head>
 
 <body>
+    <!-- 메인이라는 목적지로 이동  -->
+    <a href="#main" class="skip-nav">본문바로가기</a>
     <div class="container">
         <header class="header">
             <!-- alt="Web Cafe" 띄여쓰기 권장 -->
             <h1 class="logo"><a href="#"><img src="images/logo.png" alt="Web Cafe"></a></h1>
             <!-- ul.info>li*>a[href=#] -->
+            <!-- <ul class="member clearfix"> -->
             <ul class="member">
+            <!-- inline인 경우 눈에 보이지 않지만 공백 문자가 생김  -->
                 <li>
                     <a href="#">홈</a>
                 </li>
@@ -34,114 +38,115 @@
                 <li>
                     <a href="#">english</a>
                 </li>
-                <nav class="navigaation">
-                    <h2 class="readable-hidden">메인메뉴</h2>
-                    <ul class="menu">
-                        <li class="menu-item" tabindex="0">
-                            <span class="menu-item-text">HTML에 대해</span>
-                            <ul class="sub-menu sub-menu1">
-                                <li>
-                                    <a href="#">HTML5 소개</a>
-                                </li>
-                                <li>
-                                    <a href="#">레퍼런스 소개</a>
-                                </li>
-                                <li>
-                                    <a href="#">활용예제</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item" tabindex="0">
-                            <span class="menu-item-text">CSS에 대해</span>
-                            <ul class="sub-menu sub-menu2">
-                                <li>
-                                    <a href="#">CSS 소개</a>
-                                </li>
-                                <li>
-                                    <a href="#">CSS2 VS CSS3</a>
-                                </li>
-                                <li>
-                                    <a href="#">CSS 애니메이션</a>
-                                </li>
-                                <li>
-                                    <a href="#">CSS Framework</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item" tabindex="0">
-                            <span class="menu-item-text">웹표준</span>
-                            <ul class="sub-menu sub-menu3">
-                                <li>
-                                    <a href="#">웹표준 이란?</a>
-                                </li>
-                                <li>
-                                    <a href="#">W3C</a>
-                                </li>
-                                <li>
-                                    <a href="#">HTML5의 현재와 미래</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item menu-act" tabindex="0">
-                            <span class="menu-item-text">웹 접근성</span>
-                            <ul class="sub-menu sub-menu4">
-                                <li>
-                                    <a href="#">웹 접근성의 개요</a>
-                                </li>
-                                <li>
-                                    <a href="#">장애 환경의 이해</a>
-                                </li>
-                                <li>
-                                    <a href="#">장차법</a>
-                                </li>
-                                <li>
-                                    <a href="#">웹 접근성 품질마크</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item" tabindex="0">
-                            <span class="menu-item-text">묻고 답하기</span>
-                            <ul class="sub-menu sub-menu5">
-                                <li>
-                                    <a href="#">묻고 답하기</a>
-                                </li>
-                                <li>
-                                    <a href="#">FAQ</a>
-                                </li>
-                                <li>
-                                    <a href="#">1대1 질문</a>
-                                </li>
-                                <li>
-                                    <a href="#">웹표준</a>
-                                </li>
-                                <li>
-                                    <a href="#">웹 접근성</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item" tabindex="0">
-                            <span class="menu-item-text">자료실</span>
-                            <ul class="sub-menu sub-menu6">
-                                <li>
-                                    <a href="#">공개 자료실</a>
-                                </li>
-                                <li>
-                                    <a href="#">이미지 자료실</a>
-                                </li>
-                                <li>
-                                    <a href="#">웹표준 자료실</a>
-                                </li>
-                                <li>
-                                    <a href="#">웹 접근성 자료실</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
+            </ul>
+            <nav class="navigaation">
+                <h2 class="readable-hidden" >메인메뉴</h2>
+                <ul class="menu">
+                    <li class="menu-item" tabindex="0">
+                        <span class="menu-item-text">HTML에 대해</span>
+                        <ul class="sub-menu sub-menu1">
+                            <li>
+                                <a href="#">HTML5 소개</a>
+                            </li>
+                            <li>
+                                <a href="#">레퍼런스 소개</a>
+                            </li>
+                            <li>
+                                <a href="#">활용예제</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" tabindex="0">
+                        <span class="menu-item-text">CSS에 대해</span>
+                        <ul class="sub-menu sub-menu2">
+                            <li>
+                                <a href="#">CSS 소개</a>
+                            </li>
+                            <li>
+                                <a href="#">CSS2 VS CSS3</a>
+                            </li>
+                            <li>
+                                <a href="#">CSS 애니메이션</a>
+                            </li>
+                            <li>
+                                <a href="#">CSS Framework</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" tabindex="0">
+                        <span class="menu-item-text">웹표준</span>
+                        <ul class="sub-menu sub-menu3">
+                            <li>
+                                <a href="#">웹표준 이란?</a>
+                            </li>
+                            <li>
+                                <a href="#">W3C</a>
+                            </li>
+                            <li>
+                                <a href="#">HTML5의 현재와 미래</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-act" tabindex="0">
+                        <span class="menu-item-text">웹 접근성</span>
+                        <ul class="sub-menu sub-menu4">
+                            <li>
+                                <a href="#">웹 접근성의 개요</a>
+                            </li>
+                            <li>
+                                <a href="#">장애 환경의 이해</a>
+                            </li>
+                            <li>
+                                <a href="#">장차법</a>
+                            </li>
+                            <li>
+                                <a href="#">웹 접근성 품질마크</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" tabindex="0">
+                        <span class="menu-item-text">묻고 답하기</span>
+                        <ul class="sub-menu sub-menu5">
+                            <li>
+                                <a href="#">묻고 답하기</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#">1대1 질문</a>
+                            </li>
+                            <li>
+                                <a href="#">웹표준</a>
+                            </li>
+                            <li>
+                                <a href="#">웹 접근성</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item" tabindex="0">
+                        <span class="menu-item-text">자료실</span>
+                        <ul class="sub-menu sub-menu6">
+                            <li>
+                                <a href="#">공개 자료실</a>
+                            </li>
+                            <li>
+                                <a href="#">이미지 자료실</a>
+                            </li>
+                            <li>
+                                <a href="#">웹표준 자료실</a>
+                            </li>
+                            <li>
+                                <a href="#">웹 접근성 자료실</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
             </ul>
         </header>
         <div class="visual">비주얼</div>
-        <main class="main clearfix">
+        <main class="main" id="main">
             <div class="group group1">그룹1</div>
             <div class="group group2">그룹2</div>
             <div class="group group3">그룹3</div>
