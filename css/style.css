@@ -1,5 +1,6 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css");
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR");
+@import url("fonts.css");
 /* border-box값으로 기본처리
 레이아웃  */
 *, *::after, *::after{
@@ -134,8 +135,18 @@ h1, h2, h3, h4, h5, h6{
     /* height: 10vh; */
     position: relative;
     /* x축은 0, y축은 30px */
-    padding: 0 40px;
+    padding: 0 30px;
+    border-radius: 0 0 15px 15px; 
 }
+/* 로고 */
+.logo{
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    /* 누구랑 겹치더라도 레이어를 위로 올린다. */
+    z-index: 100;
+}
+
 /* 멤버링크 flex 사용  */
 /* 
 .member{
@@ -155,7 +166,7 @@ member li
     float: left;
 } 
 */
-/* 멤버 스타일 */
+/* 멤버 링크 */
 .member{
     text-align: right;
     font-size: 0;  
@@ -163,7 +174,7 @@ member li
     /* 상대배치 */ 
     /* position: relative;
     right: -10px; */
-    margin-left: -10px;
+    margin-right: -10px;
 } 
 .member li, .member a{
     /* inline은 높이 값을 가지고 있지 않지만  inline-block은 block이기 떄문에 가지고 있음  */
@@ -193,19 +204,115 @@ member li
     text-transform: uppercase;
 }
 
+/* 메인 메뉴 */
+.navigation{
+    padding-bottom: 40px;
+
+}
+.menu{
+    border-top: 2px solid #000; 
+    background: #f37335;  /* Old browsers */
+    background-image: linear-gradient(to bottom, #fdc830 0%, #f37335 30%, #f37335 70%, #fdc830 100%);
+    padding-left: 225px;
+    /* 독립적인 높이를 가짐 자식의 높이를 부모가 가지게 되면서 보이게 된다. */
+    /* 하위메뉴 배치에 문제가 생김 */
+    /* overflow: hidden; */
+    /* 아래쪽 모서리만 둥글게 */
+    border-radius:  0 0 5px 5px; 
+    height: 47px;
+}
+/* 자식 선택자 menu 직계자식을 선택 */
+.menu-item {
+    float: left;
+    border-left: 2px solid rgba(255,255,255,.5);
+    position: relative; 
+
+}
+/* 탭 아웃라인 안보이게 처리 */
+.menu-item:focus, .sub-menu a:focus{
+  outline: 0;
+}
+.menu-act .menu-item-text{
+    color: #ff0;
+}
+/* 마지막에 가상박스를 추가 */
+.menu-act .menu-item-text::after{
+    content: "";
+    display: block;
+    border-top: 2px solid #000; 
+}
+
+.menu-item-text{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff; 
+    /*  x축, y축, blur, color 
+        "," 단위로 무한으로 줄수 있음
+    */
+    text-shadow: 1px 1px 0 #000, 
+                 0px 1px 0 #000,
+                 -1px 0 0 #000,
+                 0 -1px 0 #000;
+    /* 마크업을 span으로 주었기 때문에  inline이기떄문에 padding 아래 위로 넣으면 적용 안됨 */
+    padding: 0 20px;
+   /* 부모영역까지 너비를 가지고 있음 */
+    display: block;
+    /* 간격을 리딩한다. 한줄일때 가운데 정렬 */
+    line-height: 45px;
+}
+/* 구조선택자 */
+.sub-menu{
+    /* 기준 menu */
+    position: absolute;
+    display: none;
+    top: 47px;
+    /* left: 0; */
+    /*  block 상자에서만 사용가능 
+        줄바꿈 속성 
+        부모의 width값을 무시*/
+    white-space: nowrap;
+}
+/* 하위메뉴 4번쨰 영역부터는 반대쪽 방향으로 */
+.menu-item:nth-child(-n+3) .sub-menu{
+    left: 0;
+}
+.menu-item:nth-child(n+4) .sub-menu{
+    right:0 ;
+}
+.menu-act .sub-menu{
+    display: block;
+}
+.sub-menu li, .sub-menu a{
+    /* inline-block 사용  */
+    display: inline-block;
+    
+}
+.sub-menu a{
+    /* 모바일 영역 땨문이라도 간격을 주는것이 좋다. */
+    padding:  8px 0;
+    margin-right: 10px; 
+}
+
 .readable-hidden{
     background: pink;
 }
+/* 
+.sub-menu a::before{
+    font-family: "webcafeIcon";
+    content: "r";
+    icon을 잘못 만들어서 삽입
+    position: relative;
+    top:2px;
+} 
+*/
+/* 마우스와 키보드 동작했을때도 아이콘 변경 
+.sub-menu a:hover::before,.sub-menu a:focus::before{
+    content: "c";
+} */
 
-/* 로고 */
-.logo{
-    position: absolute;
-    top: 50px;
-    left: 60px;
-}
 /* 비주얼 */
 .visual{
-    background-color: orange;
+    /* background-color: lime; */
 }
 /* 메인 */
 .main{
@@ -233,6 +340,7 @@ member li
 /* 슬로건 */
 .slogan{
     background-color: lime;
+    height: 10vh;
 }
 /* 푸터배경 */
 .footer-bg{
