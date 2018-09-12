@@ -1,11 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css");
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR");
 @import url("fonts.css");
-/* border-box값으로 기본처리
-레이아웃  */
-*, *::after, *::after{
-    box-sizing: border-box;
-}
 /* 스타일 초기화 
 전체 선택자: *
 */
@@ -25,7 +20,6 @@ time, mark, audio, video{
     padding: 0;
     border: 0;
     font-size: 1em;
-    font-size: 1em;
     /* font를 부모에게 상속 받아라 */
     font: inherit;
     vertical-align: baseline;
@@ -42,7 +36,7 @@ footer, header, hgroup, menu, nav, section, main{
     ol: 숫자 블릿 리스트  
 */
 ul {
-	list-style: none;
+	list-style-type: none;
 }
 table {
     /*talbe border스타일 심플하게 */
@@ -110,12 +104,15 @@ a{
     text-decoration: none;
     /* cursor: crosshair; */
 }
-/* 리셋 css */
-h1, h2, h3, h4, h5, h6{
-    /* font-size: 1em; */
-    font-weight: normal;
-    /* margin: 0; */
+/* border-box값으로 기본처리
+레이아웃  */
+*, *::before, *::after{
+    box-sizing: border-box;
 }
+/* 리셋 css */
+/* h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+} */
 /* 레이아웃 */
 .container{
     background-color: #aaa;
@@ -126,7 +123,7 @@ h1, h2, h3, h4, h5, h6{
     width: 940px; 
     margin: 0  auto;
     /* p, m를 width 값을 포함  */
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 /* 헤더 */
 .header{
@@ -142,7 +139,7 @@ h1, h2, h3, h4, h5, h6{
 .logo{
     position: absolute;
     top: 50px;
-    left: 60px;
+    left: 65px;
     /* 누구랑 겹치더라도 레이어를 위로 올린다. */
     z-index: 100;
 }
@@ -170,7 +167,7 @@ member li
 .member{
     text-align: right;
     font-size: 0;  
-    padding: 2px 0; 
+    padding: 2px 0 2px 0; 
     /* 상대배치 */ 
     /* position: relative;
     right: -10px; */
@@ -223,10 +220,9 @@ member li
 }
 /* 자식 선택자 menu 직계자식을 선택 */
 .menu-item {
+    position: relative;
     float: left;
-    border-left: 2px solid rgba(255,255,255,.5);
-    position: relative; 
-
+    border-left: 2px solid rgba(255,255,255,.5); 
 }
 /* 탭 아웃라인 안보이게 처리 */
 .menu-item:focus, .sub-menu a:focus{
@@ -260,6 +256,9 @@ member li
     /* 간격을 리딩한다. 한줄일때 가운데 정렬 */
     line-height: 45px;
 }
+.menu-act .sub-menu{
+    display: block;
+}
 /* 구조선택자 */
 .sub-menu{
     /* 기준 menu */
@@ -274,14 +273,12 @@ member li
 }
 /* 하위메뉴 4번쨰 영역부터는 반대쪽 방향으로 */
 .menu-item:nth-child(-n+3) .sub-menu{
-    left: 0;
+  left: 0;
 }
 .menu-item:nth-child(n+4) .sub-menu{
-    right:0 ;
+  right: 0;
 }
-.menu-act .sub-menu{
-    display: block;
-}
+
 .sub-menu li, .sub-menu a{
     /* inline-block 사용  */
     display: inline-block;
@@ -293,9 +290,9 @@ member li
     margin-right: 10px; 
 }
 
-.readable-hidden{
+/* .readable-hidden{
     background: pink;
-}
+} */
 /* 
 .sub-menu a::before{
     font-family: "webcafeIcon";
@@ -311,9 +308,9 @@ member li
 } */
 
 /* 비주얼 */
-.visual{
-    /* background-color: lime; */
-}
+/* .visual{
+    background-color: lime;
+} */
 /* 메인 */
 .main{
     background-color: blue;
