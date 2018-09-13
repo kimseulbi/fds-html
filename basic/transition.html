@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>전이 효과</title>
+    <style>
+        .box1{
+      width: 100px;
+      height: 100px;
+      background: yellow;
+      border: 5px solid #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition-property: background, border-radius, width, height, transform;
+      transition-duration: 2s;
+      transition-delay: 0s, 2s, 4s, 6s, 8s;
+    }
+    .box-act{
+      width: 200px;
+      height: 200px;
+      border-color: blue;
+      background: pink;
+      border-radius: 50%;
+      transform: rotate(360deg);
+    }
+  </style>
+</head>
+
+<body>
+    <div class="btn">
+        <button type="button" class="box-ani">
+            애니메이션 효과
+        </button>
+    </div>
+    <div class="box1">
+        박스 1
+    </div>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/transition.js" defer></script>
+
+</body>
+
+</html>
