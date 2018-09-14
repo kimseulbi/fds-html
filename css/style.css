@@ -567,6 +567,40 @@ fieldset{
     padding: 8px 0;
     display: inline-block;
 }
+/* me */
+/* .validation{
+   margin: 20px 0;
+}
+.validation-list li{
+    margin-bottom: 10px;
+}
+.validation-list a{
+    display: block;
+    height: 30px;
+    background: url(images/validation_icon.png) no-repeat 15px 50%, linear-gradient(to bottom, #ccc, #eee);
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    line-height: 30px;
+    text-indent: 40px;
+} */
+/* after */
+/* 유효성 검사 배너 */
+.validation{
+    margin-top: 20px;
+}
+.validation-list a{
+    display: block;
+    border: 1px solid #999;
+    border-radius: 15px;
+    margin-top:10px;
+    height: 30px;
+    line-height: 30px;
+    /* flex로 가운데정렬 하는 방법 */
+    /* display: flex;
+    align-items: center; */
+    text-indent: 45px;
+    background: url(images/validation_icon.png) no-repeat 20px 50%, linear-gradient(to bottom, #aaa, #ccc);
+}
 .group2{
     background-color: pink;
     width: 380px;
