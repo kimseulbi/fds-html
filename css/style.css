@@ -601,6 +601,36 @@ fieldset{
     text-indent: 45px;
     background: url(images/validation_icon.png) no-repeat 20px 50%, linear-gradient(to bottom, #aaa, #ccc);
 }
+.term{
+    margin-top: 20px; 
+    border: 1px solid #999;
+    border-radius: 5px; 
+    background: linear-gradient(to bottom, #aaa, #ccc);
+    padding: 15px;
+}
+.term-heading{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.term-list{
+    margin-top: 10px;
+}
+
+.term-list-subject{
+    color:#296897;
+    display:inline-block;
+
+}
+.term-list-thumbnail{
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    top:5px;
+}
+.term-list-brief{
+    margin-top: 5px;
+    text-align: justify;
+}
 .group2{
     background-color: pink;
     width: 380px;
