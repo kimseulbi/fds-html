@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="images/common/webcafe.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-    crossorigin="anonymous">    <!-- <link rel="stylesheet" href="css/style-float.css"> -->
+        crossorigin="anonymous"> <!-- <link rel="stylesheet" href="css/style-float.css"> -->
 </head>
 
 <body>
@@ -23,7 +23,7 @@
             <!-- ul.info>li*>a[href=#] -->
             <!-- <ul class="member clearfix"> -->
             <ul class="member">
-            <!-- inline인 경우 눈에 보이지 않지만 공백 문자가 생김  -->
+                <!-- inline인 경우 눈에 보이지 않지만 공백 문자가 생김  -->
                 <li>
                     <a href="#">홈</a>
                 </li>
@@ -41,7 +41,7 @@
                 </li>
             </ul>
             <nav class="navigation">
-                <h2 class="readable-hidden" >메인메뉴</h2>
+                <h2 class="readable-hidden">메인메뉴</h2>
                 <ul class="menu">
                     <!-- 키보드 포커스를 받을 수 있게 한다. tabindex="0"-->
                     <li class="menu-item menu-act">
@@ -58,7 +58,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-item" >
+                    <li class="menu-item">
                         <span class="menu-item-text">CSS에 대해</span>
                         <ul class="sub-menu">
                             <li>
@@ -75,7 +75,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-item" >
+                    <li class="menu-item">
                         <span class="menu-item-text">웹표준</span>
                         <ul class="sub-menu">
                             <li>
@@ -89,7 +89,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-item" >
+                    <li class="menu-item">
                         <span class="menu-item-text">웹 접근성</span>
                         <ul class="sub-menu">
                             <li>
@@ -106,7 +106,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-item" >
+                    <li class="menu-item">
                         <span class="menu-item-text">묻고 답하기</span>
                         <ul class="sub-menu">
                             <li>
@@ -153,10 +153,9 @@
         <main class="main" id="main">
             <div class="group group1">
                 <section class="login">
-                    <h2 class="login-heading">
-                        <!-- formspree 사용  -->
-                        <form action="https://formspree.io/ksb5166@gmail.com"
-                        method="POST" class="login-form">
+                    <h2 class="login-heading">로그인</h2>
+                    <!-- formspree 사용  -->
+                    <form action="https://formspree.io/ksb5166@gmail.com" method="POST" class="login-form">
                         <fieldset>
                             <legend>회원 로그인 폼</legend>
                             <div class="user-id">
@@ -165,24 +164,23 @@
                                 -->
                                 <label for="user-id">아이디</label>
                                 <!-- required 필수입력값 -->
-                                <input type="email" id="user-id" name="user-id" required>
+                                <input type="email" id="user-id" name="user-id" placeholder="이메일주소" required>
                             </div>
                             <div class="user-pw">
                                 <label for="user-pw">비밀번호</label>
                                 <!-- required 필수입력값 
                                      maxlength 최대6자로 제한 최소다위는 스크립트 
                                 -->
-                                <input type="password" id="user-pw" name="user-pw" required maxlength="6">
+                                <input type="password" id="user-pw" name="user-pw" placeholder="8자리 이하" required maxlength="6">
                             </div>
                             <!-- button sumbmit: 엽력값을 받아서 form으로 전송 -->
                             <button type="submit" class="btn-login">로그인</button>
                         </fieldset>
-                        </form>
-                        <ul class="sign">
-                            <li><a href="#">회원가입</a></li>
-                            <li><a href="#">아이디/비밀번호찾기</a></li>
-                        </ul>
-                    </h2>
+                    </form>
+                    <ul class="sign">
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">아이디/비밀번호찾기</a></li>
+                    </ul>
                 </section>
             </div>
             <div class="group group2">그룹2</div>

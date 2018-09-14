@@ -58,8 +58,7 @@ table {
     clear: both;
 }
 /* 숨김 콘텐츠 */
-.readable-hidden, .skip-nav{
-    background-color: yellow;
+.readable-hidden, .skip-nav, legend{
     /* 콘텐츠를 아예 없음*/
     /* display: none; */
     /* 화면에서 감춰지지만접근 할수 없음*/
@@ -432,7 +431,7 @@ member li
 /* 메인 */
 .main{
     background-color: #fff;
-    height: 60vh;
+    min-height: 450px;
     display: flex;
     /* 인라인 방향 */
     flex-direction: row;
@@ -441,8 +440,132 @@ member li
     padding:  30px 0;
 }
 .group1{
-    background-color: yellow;
     width: 250px;
+}
+/* 로그인 */
+/* me */
+/* .login{
+    background: radial-gradient(circle at right top, #e8852e, #ed552f);
+    background-color: #ed552f;
+    border-radius: 5px;
+    padding: 10px;
+    width: 250px;
+} 
+.login h2{
+    padding-left: 10px;
+}
+.login-heading{
+    font-size: 1.5rem;
+    color: #ff0;
+    font-weight: 700;
+}
+.login-form{
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+fieldset{
+    position: relative;
+}
+.login button{
+    display: inline-block;
+    position: absolute;
+}
+.login label{
+    display: inline-block;
+    width: 40px;
+}
+.login input{
+    widows: 100px;
+}
+.user-id, .user-pw{
+    display: inline-block;
+}
+.user-id{
+    margin-bottom: 5px;
+}
+*/
+/* after */
+.login{
+    background: radial-gradient(circle at right top, #e8852e, #ed552f);
+    /* shadow값은 박스사이즈 크기에 영향이 없음 */
+    box-shadow: 5px 5px 0 0 #aaa;
+    background-color: #ed552f;
+    border-radius: 5px;
+    padding: 10px;
+}
+.login-heading{
+    font-size: 1.5rem;
+    color: #ff0;
+    font-weight: 700;
+    /* block요소에서만 가능 text들여쓰기 */
+    text-indent: 10px;
+}
+.login-form{
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 5px 5px 0 0;
+    padding: 10px 10px 0 10px;
+}
+.login-form fieldset{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    position: relative;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 10px;
+}
+.user-pw{
+    margin-top: 6px;
+}
+.login-form label{
+    /* 글자 4글자 */
+    width: 4em;
+    display: inline-block;
+}
+/* input inline-block이기 떄문에 w,h 적욕가능 */
+.login-form input{
+    width: 95px;
+    height: 22px;
+    padding:5px;
+    /* 요즘에 많이 사용 하는 입력창 스타일 */
+    /* border: 0;
+    border-bottom: 1px solid #aaa; */
+}
+.btn-login{
+    height: 50px;
+    width: 50px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #f37335;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 4px;
+    /* font-size: 1rem; */
+}
+.sign{
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    padding: 2px 10px 2px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.sign li::before{
+    content: "g";
+    font-family: "webcafeIcon";
+    position: relative;
+    top: 2px;
+    color: #f37335;
+}
+/* a태그가 inline */
+.sign a{
+    letter-spacing: -1px;
+    padding: 8px 0;
+    display: inline-block;
 }
 .group2{
     background-color: pink;
