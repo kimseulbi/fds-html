@@ -171,7 +171,8 @@
                                 <!-- required 필수입력값 
                                      maxlength 최대6자로 제한 최소다위는 스크립트 
                                 -->
-                                <input type="password" id="user-pw" name="user-pw" placeholder="8자리 이하" required maxlength="6">
+                                <input type="password" id="user-pw" name="user-pw" placeholder="8자리 이하" required
+                                    maxlength="6">
                             </div>
                             <!-- button sumbmit: 엽력값을 받아서 form으로 전송 -->
                             <button type="submit" class="btn-login">로그인</button>
@@ -182,12 +183,14 @@
                         <li><a href="#">아이디/비밀번호찾기</a></li>
                     </ul>
                 </section>
-                <section class="validation"> 
+                <section class="validation">
                     <h2 class="readable-hidden">유효성 검사 배너</h2>
                     <ul class="validation-list">
                         <!-- target="_blank" 새창 -->
-                        <li><a href="https://validator.w3.org/" target="_blank" title="마크업 유효성검사 서비스로 이동">W3C Markup Validation</a></li>
-                        <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank" title="CSS 유효성검사 서비스로 이동">CSS Validation Service</a></li>                        
+                        <li><a href="https://validator.w3.org/" target="_blank" title="마크업 유효성검사 서비스로 이동">W3C Markup
+                                Validation</a></li>
+                        <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank" title="CSS 유효성검사 서비스로 이동">CSS
+                                Validation Service</a></li>
                     </ul>
                 </section>
                 <!-- <section class="term">
@@ -200,8 +203,8 @@
                 </section> -->
                 <section class="term">
                     <h2 class="term-heading">웹 관련 용어</h2>
-                    <dl class="term-list">
-                        <div class="odd">
+                    <dl class="term-list ">
+                        <div class="clearfix">
                             <dt class="term-list-subject">웹표준 이란?</dt>
                             <dd class="term-list-thumbnail">
                                 <img src="images/web_standards.gif" alt="w3C 로고">
@@ -213,7 +216,86 @@
                     </dl>
                 </section>
             </div>
-            <div class="group group2">그룹2</div>
+            <div class="group group2">
+                <!-- <section class="search">
+                    <form class="search-form">
+                        <fieldset>
+                            <legend>자료검색</legend>
+                            <label for="">자료검색</label>
+                            <input type="text" id="" placeholder="검색어를 입력하세요">
+                            <button class="btn-search">검색</button>
+                        </fieldset>
+                    </form>
+                </section> -->
+                <section class="search">
+                    <h2 class="readable-hidden">검색</h2>
+                    <!-- 입력서식이 하나이기 떄문에 div로 묶어주지 않음 -->
+                    <form action="https://formspree.io/ksb5166@gmail.com" method="POST" class="search-form">
+                        <fieldset>
+                            <legend>검색폼</legend>
+                            <label for="keyword">자료검색</label>
+                            <input type="search" id="keyword" placeholder="검색어를 입력하세요" required>
+                            <button type="submit" class="btn-search">검색</button>
+                        </fieldset>
+                    </form>
+                </section>
+                <div class="board">
+                    <section class="notice tab-act">
+                        <!-- tab-act 동적class -->
+                        <!-- aria 사용으로 id값 추가함 -->
+                        <h2 class="tab notice-heading" id="notice-heading">공지사항</h2>
+                        <ul class="notice-list">
+                            <li>
+                                <a href="#">HTML의 모든 것을 알려주마 샘플 활용법</a>
+                                <time datetime="2018-05-31T14:52:45">2018.09.17</time>
+                            </li>
+                            <li>
+                                <a href="#">W3C 사이트 리뉴얼 및 공지사항</a>
+                                <time datetime="2018-05-31T14:52:45">2018.09.17</time>
+                            </li>
+                            <li>
+                                <a href="#">KWCAG 2.1 소식</a>
+                                <time datetime="2018-05-31T14:52:45">2018.09.17</time>
+                            </li>
+                            <li>
+                                <a href="#">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+                                <time datetime="2018-05-31T14:52:45">2018.09.17</time>
+                            </li>
+                            <li>
+                                <a href="#">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
+                                <time datetime="2018-05-31T14:52:45">2018.09.17</time>
+                            </li>
+                        </ul>
+                        <a href="#" class="icon-plus notice-more" title="공지사항" aria-labelledby="notice-heading">더보기</a>
+                    </section>
+                    <section class="pds">
+                        <h2 class="tab pds-heading" id="pds-heading">자료실</h2>
+                        <ul class="pds-list">
+                            <li>
+                                <a href="#">디자인 사이트 링크 모음</a>
+                                <time datetime="2018-05-31T14:52:45">2018.09.17</time>
+                            </li>
+                            <li>
+                                <a href="#">웹 접근성 관련 자료 모음</a>
+                                <time datetime="2018-05-31T14:52:45">2018.09.17</time>
+                            </li>
+                            <li>
+                                <a href="#">예제 샘플 응용해보기</a>
+                                <time datetime="2018-05-31T14:52:45">2018.09.17</time>
+                            </li>
+                            <li>
+                                <a href="#">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a>
+                                <time datetime="2018-05-31T14:52:45">2018.09.17</time>
+                            </li>
+                            <li>
+                                <a href="#">로얄티 프리 이미지 자료</a>
+                                <time datetime="2018-05-31T14:52:45">2018.09.17</time>
+                            </li>
+                        </ul>
+                        <a href="#" class="icon-plus pds-more" title="자료실" aria-labelledby="pds-heading">더보기</a>
+                    </section>
+                </div>
+            </div>
             <div class="group group3">그룹3</div>
             <!-- <div class="group group4"></div> -->
             <!-- <div class="clearfix"></div> -->
