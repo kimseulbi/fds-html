@@ -781,6 +781,7 @@ fieldset{
     background-color: #333;
     height: 22px;
 }
+/* me */
 /* 공지사항 및 자료실 */
 /* .board [class$="list"]{
     background: skyblue;
@@ -829,6 +830,7 @@ fieldset{
     position: relative;
     top: 2px;
 } */
+/* after */
 .board{
     margin-top: 20px;
     position: relative;
@@ -841,7 +843,6 @@ fieldset{
     background: linear-gradient(to bottom, #bbb, #eee);
     color: #333;
     border-radius: 5px 5px 0 0;
-    text-align: center;
     position: absolute;
     top:0;
 }
@@ -873,7 +874,7 @@ fieldset{
     margin-bottom: 10px; 
 }
 .notice-list a, .pds-list a{
-    display: inline-block;
+    display: block;
     /* 날짜 크기는 고정으로 부모요소 크기에서 날짜 크기를 빼라 */
     width: calc(100% - 80px);
     /*  줄바꿈이 안되도록 
@@ -897,7 +898,7 @@ fieldset{
 }
 .notice-more, .pds-more{
     position: absolute;
-    top: -8px;
+    top: 0;
     right: -8px;
     padding: 8px;
 }
