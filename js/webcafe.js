@@ -4,6 +4,7 @@ var item = $('.menu-item');
 var subItem = $('.sub-menu a');
 // var tab = $('.board section');
 var tab = $('.tab');
+var list = $('.related-list')
 
 // 메인 메뉴 제어를 위한 함수 
 // 동적으로 컨트롤 할수 있음 
@@ -45,4 +46,15 @@ tab.on("click focusin",function () {
     $(this).parent().addClass('tab-act');
 });
 
+// 관련 사이트 목록 애니메니션을 위한 함수 
+// list.hover(function(){
+//     $(this).toggleClass('related-act'); 
+// });
+
+list.on('mouseover focusin', function (){
+    $(this).addClass("related-act");
+});
+list.on('mouseout focusout', function (){
+    $(this).removeClass("related-act");
+});
  
