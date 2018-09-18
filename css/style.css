@@ -152,7 +152,6 @@ a{
     width: 380px;
 }
 .group3{
-    background-color: skyblue;
     width: 190px;
 }
 
@@ -443,9 +442,14 @@ member li
     display: flex;
     /* 인라인 방향 */
     flex-direction: row;
-    /* 항목을 균등하게 분배 항목 주위에 공백 */
-    justify-content: space-evenly;
-    padding:  30px 0;
+    /*  항목을 균등하게 분배 항목 주위에 공백
+        ie11에서 사용 할수 없음 
+        */
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
+    /* padding:  30px 0; */
+    padding: 30px;
+    border-radius: 15px 15px 0 0;
 }
 .group1{
     width: 250px;
@@ -664,6 +668,7 @@ fieldset{
     color: #296897;
 }
 .term-list-thumbnail{
+
 }
 /*  이미지영역아래에 있는 디센더 시킴 
     dd 영역을 float시킨것인지 img영역을 float화 한것이 아니기 떄문에 아래 영역에 디센거가 생긴것임
@@ -946,7 +951,9 @@ fieldset{
     top: 2px;
     color: #0f0;
 } */
-/* after */
+/* after 
+float
+*/
 .news{
     position: relative;
 }
@@ -965,19 +972,77 @@ fieldset{
     font-size: 1.5rem;
 }
 .news-article{
-    /* a태그는 inline영역이기 때문에 block으로 설정 */
     margin-top:35px;
     display: block;
 }
-.news-item{
-    padding-left: 130px;
-    position: relative; 
+.news-item-heading, .news-item-brief, .news-item-date{
+    float: right;
+    width: 250px;
 }
 .news-item-heading{
     font-weight: 700;
 }
 .news-item-brief{
-    /* 오른족 왼쪽에 text맞춤 */
+    text-align: justify;
+    padding-top: 5px;
+}
+.news-item-thumbnail{
+    text-align: center;
+    width: 112px;
+
+}
+.news-item-thumbnail img{
+    margin-bottom:  15px;
+    box-shadow: 0 15px 25px 0 #aaa;
+}
+.news-more{
+    position: absolute;
+    top:-8px;
+    right: -8px;
+    padding: 8px;
+}
+.news-more::before{
+    content: "p";
+    font-family: "WebcafeIcon";
+    position: relative;
+    top: 2px;
+    color: #0f3;
+}
+/* position */
+/*
+.news{
+    position: relative;
+}
+.news::before{
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, #bbb, #eee);
+}
+.news-heading{
+    color: #f37335;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.news-article{
+    a태그는 inline영역이기 때문에 block으로 설정
+    margin-top:35px;
+    display: block;
+}
+.news-item{
+    padding-left: 130px;
+    position: relative;
+     position을 가진 상태로 레이어 작업이 들어간다면 최소높이 할당 
+    min-height: 120px;
+}
+.news-item-heading{
+    font-weight: 700;
+}
+.news-item-brief{
+    오른족 왼쪽에 text맞춤
     text-align: justify;
     margin-top: 10px;
 }
@@ -1003,6 +1068,135 @@ fieldset{
     position: relative;
     top: 2px;
     color: #0f3;
+}
+*/
+/* 신규 이벤트 및 관련 사이트 */
+/* me */
+/* .event-related{
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    background: linear-gradient(to bottom, #bbb, #eee);
+}
+.event{
+    position: relative;
+}
+.event-heading{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 5px 0 10px 0; 
+}
+.event-heading span{
+    color: #f37335;
+}
+.event-thumbnail{
+    border: 1px solid #aaa;
+    box-shadow: 5px 10px 0 #aaa;
+}
+.event-brief{
+    display: block;
+    margin-top: 20px; 
+}
+.btn-event{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.btn-event-prev, .btn-event-next{
+        display: inline-block;
+        width: 20px;
+        text-indent:  18px;
+        overflow: hidden;
+        white-space: nowrap;
+        background-image:  url("../css/images/back_forward.png");
+    }
+.btn-event-prev{
+    background-position: 0 
+}
+.btn-event-next{
+    background-position: -36px 0; 
+} */
+/* after */
+.event-related{
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    background: linear-gradient(to bottom, #bbb, #eee);
+}
+.event{
+    position: relative;
+}
+.event-heading,.related-heading{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 5px 0 10px 0; 
+}
+.event-heading span, .related-heading span{
+    color: #f37335;
+}
+.event-thumbnail, .event-brief{
+    margin: 10px 0; 
+}
+.event-thumbnail img{
+    box-shadow: 5px 5px 0 0 #aaa;
+    border: 1px solid #999;
+}
+.btn-event{
+    position: absolute;
+    top:0;
+    right:0;
+    /* 자식요소들이 float를 가지면 부모 높이를 잃어버림 overflow:hiddle으로 높이를 찾음  */
+    overflow: hidden;
+    height: 20px;
+}
+.btn-event-prev, .btn-event-next{
+    height: 0;
+    float: left;
+    cursor: pointer;
+    width: 19px;
+    height: 100%;
+    padding-top: 18px;
+    border: 0;
+    background: transparent url("images/back_forward.png") no-repeat;
+}
+.btn-event-prev:focus, .btn-event-next:focus{
+    /* tab style */
+    outline: 1px solid red;
+    /* tab style 안쪽으로 */
+    outline-offset: -4px;
+}
+.btn-event-next{
+    /* 계산하지 않고 백분률 방식으로 */
+    background-position: 100% 0; 
+    margin-left: 5px;
+}
+.related{
+    border-top: 1px solid #aaa;
+    padding-top: 10px;
+}
+.related-list{
+    background: #fff;
+    margin-top: 10px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    transition: height  0.5s 0s, background 0.5s 0.5s;
+}
+/* .related-list:hover, .related-list:focus{
+    height: 150px;
+    background: pink;
+} */
+.related-act{
+    /* background: #0f0; */
+    height: 150px;
+}
+.related-list a{
+    display: block;
+    text-indent: 1em;
 }
 /* 슬로건 */
 .slogan{
