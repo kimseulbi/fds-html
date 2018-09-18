@@ -908,7 +908,101 @@ fieldset{
     position: relative;
     top: 2px;
     color: #0f0;
-
+}
+/* 새소식 */
+/* mex */
+/* .news{
+    background-color: yellow;
+    position: relative;
+}
+.news-heading{
+    background-color: olive;
+    padding: 10px 0;
+    color: #f37335;
+    font-weight: 700;
+}
+.news-item{
+    margin-top: 20px; 
+}
+.news-item-thumbnail{
+    float: left;
+    background: pink;
+    display: block;
+}
+.news-item-heading, .news-item-date, .news-item-brief{
+    float: right;
+    width: 250px;
+}
+.news-more{
+    position: absolute;
+    top:0;
+    right: -8px;
+    padding: 8px;
+}
+.news-more::before{
+    content: "p";
+    font-family: "WebcafeIcon";
+    position: relative;
+    top: 2px;
+    color: #0f0;
+} */
+/* after */
+.news{
+    position: relative;
+}
+.news::before{
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, #bbb, #eee);
+}
+.news-heading{
+    color: #f37335;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.news-article{
+    /* a태그는 inline영역이기 때문에 block으로 설정 */
+    margin-top:35px;
+    display: block;
+}
+.news-item{
+    padding-left: 130px;
+    position: relative; 
+}
+.news-item-heading{
+    font-weight: 700;
+}
+.news-item-brief{
+    /* 오른족 왼쪽에 text맞춤 */
+    text-align: justify;
+    margin-top: 10px;
+}
+.news-item-thumbnail{
+    position: absolute;
+    top:5px;
+    left:0;
+    text-align: center;
+}
+.news-item-thumbnail img{
+    margin-bottom:  15px;
+    box-shadow: 0 15px 25px 0 #aaa;
+}
+.news-more{
+    position: absolute;
+    top:-8px;
+    right: -8px;
+    padding: 8px;
+}
+.news-more::before{
+    content: "p";
+    font-family: "WebcafeIcon";
+    position: relative;
+    top: 2px;
+    color: #0f3;
 }
 /* 슬로건 */
 .slogan{
