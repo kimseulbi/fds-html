@@ -339,7 +339,7 @@ member li
 
 /* 비주얼 */
 .visual{
-    background: transparent;
+    /* background: transparent; */
     min-height: 120px;
     /* 마진값이 밖으로 나가지 않게 막아줌 (border, padding) */
     /* border-top: 1px solid red;  */
@@ -396,7 +396,7 @@ member li
      /* 애니메이션  duration (필수요소)*/
      animation-duration: 3000ms;
      animation-fill-mode:forwards;
-      /* 자식요소 diplay 수정 */
+      /* 자식요소 display 수정 */
      /* display: inline-block; */
      /* 라이브러리 애니메이션 */
      /* animation:  swing 3000ms; */
